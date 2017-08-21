@@ -16,15 +16,6 @@ var retweet = function() {
                 Twitter.post('statuses/retweet/:id', {id: v.id_str}, (err, response) => {
                     if (!err){
                         console.log(`- ${v.id_str} - ${v.user.location} - ${v.text.substr(0,15).toString()}`);
-                        
-//                        Twitter.post('favorites/create/:id', {id: v.id_str}, (err, response) => {
-//                            if (!err){
-//                                console.log(`- ${v.id_str} - ${v.user.location} - ${v.text.substr(0,15).toString()}`);
-//                            }
-//                            else {
-//                                console.log(`- Done - ${v.id_str} - ${v.user.location} - ${v.text.substr(0,15).toString()}`);
- //                           }
-//                        });
                     }
                     else {
                         console.log(`- Done - ${v.id_str} - ${v.user.location} - ${v.text.substr(0,15).toString()}`);
